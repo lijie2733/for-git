@@ -29,6 +29,27 @@ int linklist_and_func::print_linklist(){
         return 0;
     }
 }
+int linklist_and_func::sort_value(){
+    linklist* p=L->next;//p指针指向头元素
+    linklist* t=p->next;//t指针指向下一个元素
+    int i=L->data;
+    int ox=1;    
+    while(i--&&ox){
+        while(t!=NULL){
+            int temp;
+            if(p->data>t->data){
+            temp=p->data;
+            p->data=t->data;
+            temp->data=temp;
+            }
+            p=p->next;
+            t=t->next;}
+            }
+        p=L;
+        
+    }
+    
+
 int main(void){
     int n;
     cout<<"please tell me the length of your linklist";
