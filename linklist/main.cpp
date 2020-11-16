@@ -45,11 +45,21 @@ int linklist_and_func::sort_value(){
             ox=1;
             }
             p=p->next;
-            t=t->next;}
+            t=t->next;
             }
-        p=L->next;
-        t=p->next;
-    }    
+            }
+    return 0;}
+int linlist_and_func::delete_value(int i){
+    linklist*p=L;
+    i-=1;
+    while(i--){
+        p=p->next;
+    }
+    linklist* t=p->next->next;
+    p->next=NULL;
+    p->next=t;
+    return 0;
+}
 int main(void){
     int n;
     cout<<"please tell me the length of your linklist";
